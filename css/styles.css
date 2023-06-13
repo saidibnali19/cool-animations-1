@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+}
+
+a{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    margin: 1rem 0 0 1rem;
+    transition: translate 450ms;
+    position: relative;
+    z-index: 1;
+    translate: -.5rem .5rem;
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border: 2px solid rgb(0 0 0 / .7);
+    transition: translate 450ms;
+    translate: .5rem -.5rem;
+}
+
+a:hover::after{
+    translate: 0 0;
+}
+
+a:hover{
+    translate: 0 0;
+}
+
